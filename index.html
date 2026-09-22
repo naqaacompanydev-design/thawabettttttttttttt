@@ -619,11 +619,25 @@
     .footer-bottom{flex-direction:column;align-items:flex-start;}
   }
 </style>
+
+<style>
+  /* هيرو زي الموقع القديم */
+  .hero img.bg{object-position:center center;filter:none;}
+  .hero::after{background:linear-gradient(270deg,rgba(5,23,34,.84) 0%,rgba(7,29,42,.68) 38%,rgba(7,29,42,.28) 100%);}
+  @media (max-width:767px){
+    .hero img.bg{object-position:32% center;}
+    .hero::after{background:linear-gradient(180deg,rgba(5,23,34,.62),rgba(5,23,34,.86));}
+  }
+</style>
 </head>
 <body>
 
 <section class="hero">
-  <img class="bg" src="https://images.unsplash.com/photo-1596496181848-3091d4878b24?q=80&w=1600&auto=format&fit=crop" alt="">
+  <picture>
+    <source media="(max-width:767px)" srcset="https://www.thawabet.sa/images/hero-01-900.webp">
+    <img class="bg" src="https://www.thawabet.sa/images/hero-01.webp" alt="" referrerpolicy="no-referrer" fetchpriority="high" decoding="async"
+         onerror="this.onerror=null;this.previousElementSibling.remove();this.src='https://images.unsplash.com/photo-1596496181848-3091d4878b24?q=80&w=1600&auto=format&fit=crop'">
+  </picture>
 
   <div class="topstrip">
     <span class="badge">🛡️ قنوات ثوابت الرسمية والمعتمدة</span>
